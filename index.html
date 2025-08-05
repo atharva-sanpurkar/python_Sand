@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🐍 Python Learning Sandbox</h1>
+            <p>Explore recursion, returns, lambdas, and scope with interactive visualizations</p>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="module-selector">
+                    <h3>Learning Modules</h3>
+                    <button class="module-btn active" data-module="recursion">🔄 Recursion Visualizer</button>
+                    <button class="module-btn" data-module="returns">↩️ Return Explorer</button>
+                    <button class="module-btn" data-module="lambda">λ Lambda Playground</button>
+                    <button class="module-btn" data-module="scope">🌍 Scope & Lifetime</button>
+                </div>
+
+                <div class="examples-dropdown">
+                    <h4>Quick Examples</h4>
+                    <select id="examples-select">
+                        <option value="">Choose an example...</option>
+                    </select>
+                </div>
+
+                <div class="controls">
+                    <button id="run-btn" class="control-btn primary">▶️ Run</button>
+                    <button id="step-btn" class="control-btn">⏭️ Step</button>
+                    <button id="reset-btn" class="control-btn">🔄 Reset</button>
+                    <button id="explain-btn" class="control-btn">💡 Explain</button>
+                </div>
+
+                <div class="explanation-toggle">
+                    <label>
+                        <input type="checkbox" id="show-explanation">
+                        Show Behind-the-Scenes
+                    </label>
+                </div>
+            </div>
+
+            <div class="workspace">
+                <div class="editor-section">
+                    <div class="editor-header">
+                        <h3>Python Code Editor</h3>
+                    </div>
+                    <div class="code-editor-container">
+                        <div id="code-editor" class="code-editor" contenteditable="true" spellcheck="false"></div>
+                        <div class="line-numbers" id="line-numbers"></div>
+                    </div>
+                </div>
+
+                <div class="visualizer-section">
+                    <div class="visualizer-header">
+                        <h3 id="visualizer-title">Recursion Visualizer</h3>
+                    </div>
+                    <div id="visualizer-content">
+                        <div id="call-stack" class="call-stack"></div>
+                        <div id="output-display" class="output-display"></div>
+                        <div id="scope-visualizer" class="scope-visualizer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="console-section">
+            <div class="console-header">
+                <h3>Console Output</h3>
+                <button id="clear-console" class="clear-btn">Clear</button>
+            </div>
+            <div id="console-output" class="console-output"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html> 
